@@ -18,4 +18,10 @@ $(function() {
       });
   });
 
+  $(".div2child").click(function(){
+    $('body').animate({
+       scrollTop: $("#theDiv").offset().top
+    }, 'slow');
+  });
+
 });
