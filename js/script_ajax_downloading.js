@@ -33,4 +33,14 @@ $(function(){
       alert("error: " + err);
     },
   });
+
+  $.ajax({
+    url: "http://api.ideiadoluiz.com.br/postit/",
+    success: function(response) {
+       var importedSVGRootElement = document.importNode(response.documentElement,true);
+      //append the imported SVG root element to the appropriate HTML element
+      $("#wow").append(importedSVGRootElement);
+    }
+  });
+
 });
